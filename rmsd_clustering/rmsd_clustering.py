@@ -1,10 +1,4 @@
-import MDAnalysis as mda
-import numpy as np
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-from MDAnalysis.analysis import align
-from MDAnalysis.analysis.rms import rmsd
+### KOGNOLE A.A. June 18, 2018 ###
 
 def rmsd_clustering(pdb, trj, jobname, cutoff, skip, align_to):
     import MDAnalysis as mda
@@ -123,11 +117,8 @@ skip = 5
 # Align trajectory to selection and calculate RMSD
 align_to = "nucleic and (name P or name O3' or name C3' or name C4' or name C5' or name O5')"
 
-jobname = ("1XYZ.run.1")
-
-trj = ('./system.nowater.merged.dcd')
-pdb = ('./system.nowater.pdb')
+jobname = ("test-run")
+trj = ('./test.dcd')
+pdb = ('./test.pdb')
 
 rmsd_clustering(pdb, trj, jobname, cutoff, skip, align_to)
-
-print "--> Clustering finished successfully!!!"
