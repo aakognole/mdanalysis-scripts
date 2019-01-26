@@ -3,7 +3,6 @@
 def rmsd_clustering(pdb, trj, jobname, cutoff, skip, align_to):
     import MDAnalysis as mda
     import numpy as np
-    import matplotlib.pyplot as plt
     from MDAnalysis.analysis import align
     from MDAnalysis.analysis.rms import rmsd
     # Build universe and align trajectory
